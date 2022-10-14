@@ -10,7 +10,7 @@ import bgImg from "../static/assets/main_bg.png";
 function Main() {
     return (
     <Block>
-        <BlockText>음악,<br></br>함께할 누군가가 필요할 때</BlockText>
+        <MainText>음악,<br></br>함께할 누군가가 필요할 때</MainText>
     </Block>
     );
 }
@@ -24,14 +24,13 @@ const Block = styled.main`
     background-position: center center;
 `;
 
-const BlockText = styled.main`
-    position: fixed;
+const MainText = styled.div`
+    padding-left:250px;
+    padding-top: 300px;
     line-height: 75px;
     font-size:54px;
     font-weight:600;
     color:white;
-    top: 300px;
-    left: 255px;
 `;
 
 export default Main;

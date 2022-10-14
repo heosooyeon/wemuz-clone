@@ -9,13 +9,13 @@ import logoImg from "../static/assets/wemuz.png";
 function Nav() {
     return(
         <Block>
-            <LOGO src={logoImg}></LOGO>
-            <Block1>
-                <Block_bnt>공지사항</Block_bnt>
-                <Block_bnt>문의사항</Block_bnt>
-                <Block_bnt>프로젝트</Block_bnt>
-                <Block_bnt1>로그인</Block_bnt1>
-            </Block1>
+            <Logo src={logoImg}></Logo>
+            <NavTabs>
+                <NavBtn>공지사항</NavBtn>
+                <NavBtn>문의사항</NavBtn>
+                <NavBtn>프로젝트</NavBtn>
+                <LoginBtn>로그인</LoginBtn>
+            </NavTabs>
         </Block>
     );
 }
@@ -34,7 +34,7 @@ const Block = styled.nav`
     
 `;
 
-const LOGO = styled.img`
+const Logo = styled.img`
     position:fixed;
     top: 17px;
     left: 35px;
@@ -45,14 +45,14 @@ const LOGO = styled.img`
     }
 `;
 
-const Block1 = styled.nav`
-    position:fixed;
-    right: 150px; 
-    top: 15px;
+const NavTabs = styled.div`
+    display:flex;
+    justify-content:flex-end;
+    padding-top:15px;
+    padding-right: 20px;
 `;
 
-const Block_bnt = styled.button`
-    left: 80px;
+const NavBtn = styled.button`
     margin-right:15px;
     height: 35px;
     color: white;
@@ -63,7 +63,7 @@ const Block_bnt = styled.button`
     font-weight:600;
     text-transform:uppercase;
     &:hover{
-        consur:pointer;
+        cursor:pointer;
         color: #785FFA;
         transition-duration :0.5s;
     }
@@ -79,10 +79,7 @@ const Block_bnt = styled.button`
 }
 `;
 
-const Block_bnt1 = styled.button`
-    position:fixed;
-    top: 15px;
-    right: 50px;
+const LoginBtn = styled.button`
     height: 30px;
     width:80px;
     background-color: #785FFA;
